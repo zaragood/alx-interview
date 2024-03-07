@@ -38,5 +38,4 @@ def pascal_triangle(n):
 
         # Append the new row to the triangle
         triangle.append(new_row)
-
     return triangle
