@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""method that determines if a given data set represents a valid UTF-8 encoding.
+"""method that determines if a given data set represents
+ a valid UTF-8 encoding.
 
 Prototype: def validUTF8(data)
 Return: True if data is a valid UTF-8 encoding, else return False
@@ -11,10 +12,11 @@ the 8 least significant bits of each integer
 
 """
 
+
 def validUTF8(data):
     # Number of bytes in the current UTF-8 character
     num_bytes = 0
-    
+
     # Iterate through each byte in the data
     for byte in data:
         # Check if this byte is a start byte or a continuation byte
@@ -40,6 +42,6 @@ def validUTF8(data):
                 # Invalid continuation byte
                 return False
             num_bytes -= 1
-    
+
     # If there are remaining bytes, the data is invalid
     return num_bytes == 0
